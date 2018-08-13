@@ -1,0 +1,6 @@
+@import "base/variables";
+
+//foundation element
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;
