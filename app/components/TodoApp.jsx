@@ -20,7 +20,7 @@ handleSearch:function(showCompletetd,searchText)
     searchText:searchText.toLowerCase()
   });
 },
-ComponentDidUpdate:function(){
+componentDidUpdate:function(){
   TodoAPI.setTodos(this.state.todos);
 },
 handleToggle:function(id){
