@@ -11,7 +11,7 @@ this.props.onSearch(showCompletetd,searchText);
 
 render:function(){
   return(
-<div>
+<div className='container__header'>
 <div>
 <input type="search" ref="searchText" placeholder="Search Compleetd Todos" onChange={this.handleSearch}></input>
 </div>
