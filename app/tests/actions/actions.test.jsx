@@ -6,9 +6,9 @@ describe('Actions',()=>{
 it('should return set serach text',()=>{
 var action={
   type:'SET_SEARCH_TEXT',
-searchtext:'Some text search'
+searchText:'Some text search'
 };
-var res=actions.setSearchText(action.searchtext);
+var res=actions.setSearchText(action.searchText);
 
   expect(res).toEqual(action);
 });

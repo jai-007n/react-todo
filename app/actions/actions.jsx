@@ -1,7 +1,7 @@
-export var setSearchText=(searchtext)=>{
+export var setSearchText=(searchText)=>{
 return{
   type:'SET_SEARCH_TEXT',
-  searchtext
+  searchText
 };
 };
 
