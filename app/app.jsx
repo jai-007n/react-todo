@@ -11,9 +11,9 @@ store.subscribe(()=>{
   console.log('New State ',store.getState());
   });
 
-store.dispatch(actions.addTodo('clean the street'));
-store.dispatch(actions.setSearchText('street'));
-store.dispatch(actions.toggleShowCompleted());
+// store.dispatch(actions.addTodo('clean the street'));
+// store.dispatch(actions.setSearchText('street'));
+// store.dispatch(actions.toggleShowCompleted());
 
 
 
