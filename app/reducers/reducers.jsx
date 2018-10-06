@@ -25,7 +25,7 @@ export var showCompletedReducer=(state=false,action)=>{
   }
 };
 
-export var todosReducers=(state=[],action)=>{
+export var todosReducer=(state=[],action)=>{
 
 switch(action.type)
 {
@@ -44,13 +44,16 @@ switch(action.type)
   return state.map((todo)=>{
     if(todo.id === action.id)
     {
-      var nextCompleted=!todo.completed;
+      var nextCompleted= !todo.completed;
 
       return {
         ...todo,
         completed:nextCompleted,
-        completedAt:nextCompleted ? moment().unix() : undefined
+        completedAt: nextCompleted ? moment().unix() : undefined
       };
+    }
+    else{
+      return todo;
     }
   });
   default:
