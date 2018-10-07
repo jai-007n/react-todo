@@ -6,19 +6,17 @@ var {Provider}=require('react-redux');
 
 var actions=require('actions');
 var store=require('configureStore').configure();
+var TodoAPI=require('TodoAPI');
 
 store.subscribe(()=>{
+  var state=store.getState();
   console.log('New State ',store.getState());
+  TodoAPI.setTodos(state.todos);
   });
 
-// store.dispatch(actions.addTodo('clean the street'));
-// store.dispatch(actions.setSearchText('street'));
-// store.dispatch(actions.toggleShowCompleted());
+  var initialTodos=TodoAPI.getTodos();
+  store.dispatch(actions.addTodos(initialTodos));
 
-
-
-
-// require('style!css!foundation-sites/dist/css/foundation.min.css');
 require('style-loader!css-loader!foundation-sites/dist/css/foundation-float.min.css');
 require('style!css!sass!applicationStyles')
 $(document).foundation();
